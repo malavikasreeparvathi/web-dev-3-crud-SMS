@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/style.css">
+  <title>Student List</title>
+</head>
+<body>
+  <div class="container">
+    <div class="sidebar">
+      <h2>Menu</h2>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/students">Student List</a></li>
+        <li><a href="/students/add">Add Student</a></li>
+      </ul>
+    </div>
+
+    <div class="main-content">
+      <div class="header">
+        <h1>Student List</h1>
+      </div>
+
+      <!-- Search -->
+      <div class="search-box">
+        <form method="GET" action="/students">
+          <input type="text" name="search" placeholder="Search by name..." value="<%= search %>">
+        </form>
+      </div>
+
+      <!-- Table of students -->
+      <table class="student-table">
+        <thead>
+          <tr>
+            <th>SL No</th>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Specialization</th>
+            <th>Email</th>
+            <th>Phone</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% students.forEach(student => { %>
+            <tr>
+              <td><%= student.slno %></td>
+              <td><%= student.name %></td>
+              <td><%= student.age %></td>
+              <td><%= student.specialization %></td>
+              <td><%= student.email %></td>
+              <td><%= student.phone %></td>
+              <td>
+                <a href="/students/edit/<%= student._id %>">Edit</a> |
+                <a href="/students/delete/<%= student._id %>" onclick="return confirm('Are you sure you want to delete this student?')">Delete</a>
+              </td>
+            </tr>
+          <% }) %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</body>
+</html>

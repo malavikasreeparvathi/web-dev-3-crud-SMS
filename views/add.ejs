@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/style.css">
+  <title>Add Student</title>
+</head>
+<body>
+  <div class="container">
+    <div class="sidebar">
+      <h2>Menu</h2>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/students">Student List</a></li>
+        <li><a href="/students/add">Add Student</a></li>
+      </ul>
+    </div>
+
+    <div class="main-content">
+      <div class="header">
+        <h1>Add New Student</h1>
+      </div>
+
+      <form action="/students/add" method="POST" class="form-container">
+        <label>SL No:</label>
+        <input type="number" name="slno" required>
+
+        <label>Name:</label>
+        <input type="text" name="name" required>
+
+        <label>Age:</label>
+        <input type="number" name="age" required>
+
+        <label>Specialization:</label>
+        <input type="text" name="specialization" required>
+
+        <label>Email:</label>
+        <input type="email" name="email" required>
+
+        <label>Phone:</label>
+        <input type="text" name="phone" required>
+
+        <button type="submit">Add Student</button>
+      </form>
+    </div>
+  </div>
+</body>
+</html>
