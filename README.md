@@ -34,3 +34,7 @@ It allows managing student records including adding, editing, viewing, and delet
 ---
 
 ## Screenshots of the web app
+
+- home.png
+- student_list.png
+- add_student.png
