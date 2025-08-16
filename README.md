@@ -33,8 +33,13 @@ It allows managing student records including adding, editing, viewing, and delet
 
 ---
 
-## Screenshots of the web app
+## Screenshots
 
-- home.png
-- student_list.png
-- add_student.png
+1. **Home Page**  
+![Home Page](screenshots/home.png)
+
+2. **Student List**  
+![Student List](screenshots/student_list.png)
+
+3. **Add Student**  
+![Add Student](screenshots/add_student.png)
